@@ -1,0 +1,13 @@
+@font-face {
+  font-family: $font;
+  src:  url("#{ $font-folder }/ChapeauWEB-Regular.woff2") format("woff2");
+  src:  url("#{ $font-folder }/ChapeauWEB-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $font;
+  src:  url("#{ $font-folder }/ChapeauWEB-Bold.woff2") format("woff2");
+  src:  url("#{ $font-folder }/ChapeauWEB-Bold.woff") format("woff");
+  font-weight: 700;
+}

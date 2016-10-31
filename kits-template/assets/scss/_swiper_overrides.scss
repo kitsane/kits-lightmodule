@@ -1,0 +1,44 @@
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  display: flex;
+  justify-content: flex-end;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: $space;
+  height: $space;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: {
+    left: 0;
+    right: $space;
+    bottom: $space;
+  }
+}
+
+.swiper-pagination{
+  .swiper-pagination-bullet-active {
+    &:nth-child(4n+1) {
+      background: $red;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    &:nth-child(4n+2) {
+      background: $green;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    &:nth-child(4n+3) {
+      background: $blue;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    &:nth-child(4n+4) {
+      background: $yellow;
+    }
+  }
+}
