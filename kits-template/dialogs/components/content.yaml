@@ -1,0 +1,28 @@
+form:
+ tabs:
+    - name: tab_main
+      label: Allgemein
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Titel
+        - name: introduction
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Einleitung
+          rows: 5
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Bild auswählen
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          tables: true
+          height: 500
+          label: Text
+
+actions: !include /kits-template/dialogs/common/actions.yaml

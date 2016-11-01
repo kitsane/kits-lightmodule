@@ -1,0 +1,4 @@
+templateScript: /kits-template/templates/components/news_entry.ftl
+renderType: freemarker
+dialog: kits-template:components/news_entry
+title: Nachrichten Eintrag

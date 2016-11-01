@@ -1,0 +1,16 @@
+templateScript: /kits-template/templates/pages/base.ftl
+renderType: freemarker
+visible: true
+title: Aktuelles
+dialog: kits-template:pages/home
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      news_entry:
+        id: kits-template:components/news_entry
+  footer:
+    editable: false
+    inheritance:
+      enabled: true
+      components: all

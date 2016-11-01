@@ -1,0 +1,28 @@
+templateScript: /kits-template/templates/pages/base.ftl
+renderType: freemarker
+visible: true
+title: Home
+dialog: kits-template:pages/home
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      banner:
+        id: kits-template:components/banner
+      slider:
+        id: kits-template:components/slider
+      teaser:
+        id: kits-template:components/teaser
+      link_list:
+        id: kits-template:components/link_list
+      download_list:
+        id: kits-template:components/download_list
+  footer:
+    renderType: freemarker
+    type: single
+    availableComponents:
+      footer:
+        id: kits-template:components/footer
+    inheritance:
+      enabled: true
+      components: all

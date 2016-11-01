@@ -1,0 +1,20 @@
+templateScript: /kits-template/templates/pages/base.ftl
+renderType: freemarker
+visible: true
+title: Detailseite
+dialog: kits-template:pages/home
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      link_list:
+        id: kits-template:components/link_list
+      content:
+        id: kits-template:components/content
+      download_list:
+        id: kits-template:components/download_list
+  footer:
+    editable: false
+    inheritance:
+      enabled: true
+      components: all

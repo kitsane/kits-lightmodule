@@ -1,0 +1,36 @@
+form:
+ tabs:
+    - name: tab_main
+      label: Allgemein
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Titel
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Bild auswählen
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+        - name: text
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Text
+          rows: 5
+        - name: link
+          class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+          label: Link
+          fields:
+            - name: link_label
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              label: Link Label
+              i18n: true
+            - name: link_target
+              class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+              targetWorkspace: website
+              appName: pages
+              label: Seite
+
+actions: !include /kits-template/dialogs/common/actions.yaml

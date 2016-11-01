@@ -1,0 +1,18 @@
+name: tabMain
+label: Allgemein
+fields:
+  - name: title
+    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+    label: Seitentitel
+    required: true
+    i18n: true
+  - name: meta_description
+    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+    label: Meta Beschreibung
+    rows: 3
+    i18n: true
+  - name: hidden_in_navigation
+    class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+    label: ' '
+    buttonLabel: In der Navigation verstecken
+    i18n: false

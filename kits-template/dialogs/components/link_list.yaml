@@ -1,0 +1,26 @@
+form:
+ tabs:
+    - name: tab_main
+      label: Allgemein
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Titel
+        - name: links
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Links
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            fields:
+              - name: link_label
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Link Label
+              - name: link_target
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                appName: pages
+                label: Seite auswählen
+
+actions: !include /kits-template/dialogs/common/actions.yaml

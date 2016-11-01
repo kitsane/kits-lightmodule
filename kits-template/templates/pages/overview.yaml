@@ -1,0 +1,20 @@
+templateScript: /kits-template/templates/pages/base.ftl
+renderType: freemarker
+visible: true
+title: Übersicht
+dialog: kits-template:pages/home
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      banner:
+        id: kits-template:components/banner
+      slider:
+        id: kits-template:components/slider
+      teaser:
+        id: kits-template:components/teaser
+  footer:
+    editable: false
+    inheritance:
+      enabled: true
+      components: all
