@@ -4,9 +4,12 @@
 <article class="component component--full">
     <div class="component">
         <#if image?has_content >
-            <div class="component__image" style="background-image: url(${ image });"></div>
+            <a href="${ image }" class="component__image--link" target="_blank">
+              <img src="${ image }" class="component__image component__image--inline">
+            </a>
         </#if >
     </div>
+
     <div class="component">
         <h1>
             ${ content.title! }

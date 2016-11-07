@@ -194,6 +194,10 @@ main {
   &__image {
     @extend %component__image;
     margin-bottom: $space;
+
+    &--inline {
+      padding-bottom: 0;
+    }
   }
 
   *:first-child {
