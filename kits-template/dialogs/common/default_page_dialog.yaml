@@ -11,6 +11,20 @@ fields:
     label: Meta Beschreibung
     rows: 3
     i18n: true
+  - name: background
+    class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+    label: Hintergrund
+    options:
+      - name: none
+        value: ''
+        selected: true
+        label: Keiner
+      - name: lined
+        value: 'lined'
+        label: Liniert
+      - name: child
+        value: 'child'
+        label: Kinderzeichunngen (Grafiken fehlen noch)
   - name: hidden_in_navigation
     class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
     label: ' '

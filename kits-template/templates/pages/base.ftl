@@ -71,7 +71,11 @@
         </#if>
     </nav>
 
-    <main role="main">
+    <#assign background = ''>
+    <#if content.background?has_content>
+      <#assign background = 'background--${ content.background! }'>
+    </#if>
+    <main role="main"<#if background?has_content> class="${ background }"</#if>>
         <section class="container<#if cmsfn.editMode> container-block</#if>">
             <@cms.area name="main" />
         </section>

@@ -126,12 +126,19 @@ nav {
 
 main {
   background: {
-    image: url("../images/background_line.svg");
     position: top center;
     repeat: space;
   }
 
   border-bottom: $border;
+}
+
+.background--lined {
+  background-image: url("../images/background_line.svg");
+}
+
+.background--child {
+  //background-image: url("../images/background_line.svg");
 }
 
 .container {
