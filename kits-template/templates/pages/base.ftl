@@ -39,13 +39,17 @@
     <#assign open_sub_page = current_page>
 
     <nav class="nav--bordered">
-      <#list cmsfn.children( root_page )>
+      <#list cmsfn.children( root_page, 'mgnl:page' )>
         <ul>
           <#items as item >
-            <#if cmsfn.children( item )?seq_contains(current_page)>
-                <#assign open_sub_page = item>
+            <#if !item.hidden_in_navigation!false>
+              <#if cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)>
+                  <#assign open_sub_page = item>
+              </#if>
+              <li>
+                <a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a>
+              </li>
             </#if>
-            <li><a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a></li>
           </#items >
         </ul>
       </#list >
@@ -53,10 +57,14 @@
 
     <nav class="nav--small">
         <#if open_sub_page != root_page>
-            <#list cmsfn.children( open_sub_page )>
+            <#list cmsfn.children( open_sub_page, 'mgnl:page' )>
                 <ul>
                     <#items as item>
-                        <li><a href="${ cmsfn.link( item ) }"<#if item == current_page> class="nav--active"</#if>>${ item.title! }</a></li>
+                      <#if !item.hidden_in_navigation!false>
+                          <li>
+                            <a href="${ cmsfn.link( item ) }"<#if item == current_page> class="nav--active"</#if>>${ item.title! }</a>
+                          </li>
+                      </#if>
                     </#items>
                 </ul>
             </#list>
