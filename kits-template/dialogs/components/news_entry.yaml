@@ -16,9 +16,12 @@ form:
           contentPreviewDefinition:
             contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
         - name: text
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
           label: Text
           rows: 5
+          tables: false
+          height: 500
+
         - name: link
           class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
           transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
