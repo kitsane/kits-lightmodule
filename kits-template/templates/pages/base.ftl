@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="${ ctx.contextPath }/.resources/kits-template/webresources/images/favicon.png">
 
     <title>${ current_page.title!root_page.title!"" }</title>
     <meta name="description" content="${ current_page.meta_description!root_page.meta_description!"" }">
