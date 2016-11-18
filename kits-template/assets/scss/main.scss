@@ -137,8 +137,22 @@ main {
   background-image: url("../images/background_line.svg");
 }
 
-.background--child {
-  //background-image: url("../images/background_line.svg");
+.child-top {
+  background: {
+    image: url(../images/background_child_top.svg);
+    size: cover;
+    position: top center;
+    repeat: no-repeat;
+  }
+}
+
+.child-bottom {
+  background: {
+    image: url(../images/background_child_bottom.svg);
+    size: cover;
+    position: bottom center;
+    repeat: no-repeat;
+  }
 }
 
 .container {

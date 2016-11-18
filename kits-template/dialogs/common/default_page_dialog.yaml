@@ -13,18 +13,18 @@ fields:
     i18n: true
   - name: background
     class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
-    label: Hintergrund
+    label: Aussehen
     options:
       - name: none
         value: ''
         selected: true
-        label: Keiner
+        label: Neutral, Logo Normal, kein Hintergrund
       - name: lined
         value: 'lined'
-        label: Liniert
+        label: Schule, Logo normal, linierter Hintergrund
       - name: child
         value: 'child'
-        label: Kinderzeichunngen (Grafiken fehlen noch)
+        label: Kita, Logo kita, Zeichnungen im Hintergrund
   - name: hidden_in_navigation
     class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
     label: ' '

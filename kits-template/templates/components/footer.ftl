@@ -1,6 +1,6 @@
 <#include "../common/helpers.ftl">
 
-<footer>
+<footer<#if cmsfn.page(content).background?has_content> class="${ cmsfn.page(content).background }-bottom"</#if>>
   <nav>
       <#if ( content.links )?has_content>
           <#list cmsfn.children( content.links )>

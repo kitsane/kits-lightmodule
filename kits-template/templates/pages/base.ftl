@@ -19,10 +19,15 @@
 
     <@cms.page />
   </head>
-  <body>
+
+  <body<#if content.background?has_content> class="${ content.background }-top"</#if>>
     <header>
       <a href="${ cmsfn.link( root_page) }">
-        <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_school_logo.svg" alt="brand" width="150" height="63">
+        <#if content.background == 'child'>
+          <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_kita_logo.svg" alt="brand" width="150" height="63">
+        <#else>
+          <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_school_logo.svg" alt="brand" width="150" height="63">
+        </#if>
       </a>
 
       <a href="#" class="hidden--tablet">
