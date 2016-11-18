@@ -1,7 +1,7 @@
 <#include "../common/helpers.ftl">
 <#assign image = damfn.getAssetLink( content.image )! >
 
-<article class="component component--full">
+<article class="component component--full m-b-l">
     <div class="component">
         <#if image?has_content >
             <a href="${ image }" class="component__image--link" target="_blank">
