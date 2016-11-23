@@ -18,8 +18,18 @@
             ${ content.text! }
         </p>
 
-        <a href="${ link_by_path( content.link_target! ) }">
-            ${ content.link_label! }
-        </a>
+        <#if ( content.links )?has_content>
+            <#list cmsfn.children( content.links )>
+                <ul>
+                    <#items as link>
+                        <li>
+                            <a href="${ link_by_path( link.link_target! ) }">
+                                ${ link.link_label! }
+                            </a>
+                        </li>
+                    </#items>
+                </ul>
+            </#list>
+        </#if>
     </div>
 </article>
