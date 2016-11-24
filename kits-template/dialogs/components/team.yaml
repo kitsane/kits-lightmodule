@@ -1,0 +1,60 @@
+form:
+ tabs:
+    - name: tab_main
+      label: Allgemein
+      fields:
+        - name: image_1
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Bild 1
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+        - name: text_1
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Begleittext 1
+          rows: 5
+
+        - name: image_2
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Bild 2
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+        - name: text_2
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Begleittext 2
+          rows: 5
+
+        - name: image_3
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Bild 3
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+        - name: text_3
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Begleittext 3
+          rows: 5
+        - name: image_4
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Bild 4
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+        - name: text_4
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Begleittext 4
+          rows: 5
+actions: !include /kits-template/dialogs/common/actions.yaml
