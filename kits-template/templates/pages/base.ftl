@@ -21,69 +21,96 @@
   </head>
 
   <body<#if content.background?has_content> class="${ content.background }-top"</#if>>
-    <header>
-      <a href="${ cmsfn.link( root_page) }">
-        <#if content.background == 'child'>
-          <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_kita_logo.svg" alt="brand" width="150" height="63">
-        <#else>
-          <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_school_logo.svg" alt="brand" width="150" height="63">
-        </#if>
-      </a>
+    <header class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-2">
+          <a href="${ cmsfn.link( root_page) }">
+            <#if content.background == 'child'>
+              <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_kita_logo.svg" alt="brand" width="150" height="63">
+            <#else>
+              <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_school_logo.svg" alt="brand" width="150" height="63">
+            </#if>
+          </a>
+        </div>
 
-      <a href="#" class="hidden--tablet">
-        Zweisprachige Tagesschule<br>
-        Bilingual Dayschool
-      </a>
+        <div class="col-md-4">
+          <div class="claim">
+            <a href="#" class="hidden--tablet">
+              Zweisprachige Tagesschule<br>
+              Bilingual Dayschool
+            </a>
+          </div>
+        </div>
 
-      <a href="#" class="hidden--tablet">
-        Kindertagesstätte<br>
-        Daycare Center
-      </a>
+        <div class="col-md-4">
+          <div class="claim">
+            <a href="#" class="hidden--tablet">
+              Kindertagesstätte<br>
+              Daycare Center
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <#assign open_sub_page = current_page>
 
     <nav class="nav--bordered">
-      <#list cmsfn.children( root_page, 'mgnl:page' )>
-        <ul>
-          <#items as item >
-            <#if !item.hidden_in_navigation!false>
-              <#if cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)>
-                  <#assign open_sub_page = item>
-              </#if>
-              <li>
-                <a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a>
-              </li>
-            </#if>
-          </#items >
-        </ul>
-      </#list >
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <#list cmsfn.children( root_page, 'mgnl:page' )>
+              <ul>
+                <#items as item >
+                  <#if !item.hidden_in_navigation!false>
+                    <#if cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)>
+                        <#assign open_sub_page = item>
+                    </#if>
+                    <li>
+                      <a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a>
+                    </li>
+                  </#if>
+                </#items >
+              </ul>
+            </#list >
+          </div>
+        </div>
+      </div>
     </nav>
 
     <nav class="nav--small">
-        <#if open_sub_page != root_page>
-            <#list cmsfn.children( open_sub_page, 'mgnl:page' )>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <#if open_sub_page != root_page>
+              <#list cmsfn.children( open_sub_page, 'mgnl:page' )>
                 <ul>
-                    <#items as item>
-                      <#if !item.hidden_in_navigation!false>
-                          <li>
-                            <a href="${ cmsfn.link( item ) }"<#if item == current_page> class="nav--active"</#if>>${ item.title! }</a>
-                          </li>
-                      </#if>
-                    </#items>
+                  <#items as item>
+                    <#if !item.hidden_in_navigation!false>
+                      <li>
+                        <a href="${ cmsfn.link( item ) }"<#if item == current_page> class="nav--active"</#if>>${ item.title! }</a>
+                      </li>
+                    </#if>
+                  </#items>
                 </ul>
-            </#list>
-        </#if>
+              </#list>
+            </#if>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <#assign background = ''>
     <#if content.background?has_content>
       <#assign background = 'background--${ content.background! }'>
     </#if>
+
     <main role="main"<#if background?has_content> class="${ background }"</#if>>
-        <section class="container<#if cmsfn.editMode> container-block</#if>">
-            <@cms.area name="main" />
-        </section>
+      <section class="container">
+        <div class="row">
+          <@cms.area name="main" />
+        </div>
+      </section>
     </main>
 
     <@cms.area name="footer" />

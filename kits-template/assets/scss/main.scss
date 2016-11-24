@@ -1,22 +1,35 @@
-@import "variables";
-@import "fonts";
 
-@import "swiper_overrides";
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1055px
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap-grid';
+
+@import 'variables';
+@import 'fonts';
+
+@import 'swiper_overrides';
 
 body {
+  letter-spacing: .07rem;
+
+  color: $black;
+  background-color: $body_bg;
+
   font-family: $font;
   font-size: $font-size-base;
   line-height: 1.6;
-  letter-spacing: .07rem;
-  color: $black;
-  background-color: $body_bg;
+
   text-rendering: geometricPrecision;
 }
 
 a {
   cursor: pointer;
-  color: $black;
   text-decoration: none;
+
+  color: $black;
   border-bottom: $border;
 
   &:hover {
@@ -25,26 +38,30 @@ a {
   }
 }
 
-%container {
-  max-width: 1050px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 header {
-  @extend %container;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin: {
+    top: $space;
+    bottom: $space;
+  }
+
+  .claim {
+    position: relative;
+
+    display: table;
+
+    height: 100%;
+  }
 
   a {
-    max-width: $space * 20;
-    margin: $space;
+    display: table-cell;
+
+    vertical-align: middle;
+
+    border-bottom: none;
+
     font-size: $font-size-large;
     font-weight: bold;
     line-height: 1.3;
-    border-bottom: none;
 
     &:hover {
       border-bottom: none;
@@ -58,19 +75,22 @@ nav {
       top: $border;
       bottom: $border;
     }
-    height: calc(#{ $space-large } - #{ $border-width * 2 });
   }
 
   ul {
-    @extend %container;
-    height: 100%;
+    //height: calc(#{$space-large} - #{$border-width * 2});
+    display: table;
+
+    margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
   }
 
   li {
-    margin-left: $space;
+    display: table-cell;
+
+    padding-right: $space;
+
+    vertical-align: middle;
 
     &:nth-child(4n+1) {
       a {
@@ -114,8 +134,9 @@ nav {
   }
 
   &.nav--small {
-    font-size: .8rem;
     height: $space-large;
+
+    font-size: .8rem;
   }
 
   .nav--active {
@@ -125,12 +146,12 @@ nav {
 }
 
 main {
+  border-bottom: $border;
   background: {
     position: top center;
+
     repeat: space;
   }
-
-  border-bottom: $border;
 }
 
 .background--lined {
@@ -139,33 +160,28 @@ main {
 
 .child-top {
   background: {
+    position: top center;
+
     image: url(../images/background_child_top.svg);
     size: cover;
-    position: top center;
     repeat: no-repeat;
   }
 }
 
 .child-bottom {
   background: {
+    position: bottom center;
+
     image: url(../images/background_child_bottom.svg);
     size: cover;
-    position: bottom center;
     repeat: no-repeat;
   }
-}
-
-.container {
-  @extend %container;
-}
-
-.container-block {
-  display: block;
 }
 
 %component__image {
   width: 100%;
   padding-bottom: 50%;
+
   background: {
     size: cover;
     repeat: no-repeat;
@@ -177,47 +193,25 @@ main {
 }
 
 .component {
-  width: 50%;
-
-  @media screen and (max-width: 520px) {
-    width: 100%;
-  }
-
-  padding: {
-    left: $space;
-    right: $space;
-  }
-
-  margin: {
-    top: 0;
-    bottom: $space * 3;
-  }
-
-  &--full {
-    width: 100%;
-
-    .component {
-      margin-bottom: 0;
-      padding: 0;
-      float: left;
-      width: calc(50% - #{ $space });
-      @media screen and (max-width: 520px) {
-        margin-bottom: $space;
-        width: 100%;
-      }
-
-      &:first-child {
-        margin-right: $space * 2;
-      }
-    }
-  }
+  margin-bottom: $space * 3;
 
   &__image {
-    @extend %component__image;
     margin-bottom: $space;
+
+    @extend %component__image;
 
     &--inline {
       padding-bottom: 0;
+    }
+
+    &--portrait {
+      padding-bottom: 100%;
+
+      background: {
+        position: center;
+
+        size: contain;
+      }
     }
   }
 
@@ -230,12 +224,12 @@ main {
   }
 
   ul {
-    padding: 0;
     margin: {
       top: $space;
       bottom: $space;
       left: $space * 1.1;
     }
+    padding: 0;
 
     li {
       margin-bottom: $space-large;
@@ -332,21 +326,17 @@ h1 {
 
 footer {
   margin-top: $space;
-  @extend %container;
 
   nav {
     width: 50%;
     margin-bottom: $space;
-
-    ul {
-      align-items: flex-start;
-    }
   }
 }
 
 .component {
   .icon__list {
     margin-left: 0;
+
     list-style: none;
 
     li {
@@ -355,23 +345,29 @@ footer {
 
     &--download {
       &:before {
-        content: '';
-        background: {
-          image: url("../images/icon_download.svg");
-          repeat: no-repeat;
-          position: center left;
-        }
-        height: $space-large + $space;
-        width: $space-large;
         float: left;
         clear: both;
+
+        width: $space-large;
+        height: $space-large + $space;
+
+        content: '';
+
+        background: {
+          position: center left;
+
+          image: url("../images/icon_download.svg");
+          repeat: no-repeat;
+        }
       }
-    }
-    &--link {
     }
   }
 }
 
-.m-b-l {
-  margin-bottom: 7rem;
+figure {
+  margin: 0;
+}
+
+.space-small {
+  margin-bottom: $space;
 }

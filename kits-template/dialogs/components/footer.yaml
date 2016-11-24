@@ -3,26 +3,17 @@ form:
     - name: tab_main
       label: Allgemein
       fields:
-        - name: contact_informations
+        - name: contact_informations_left
           class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
-          tables: true
           height: 500
-          label: Kontaktinformationen
-        - name: links
-          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
-          label: Links
-          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
-          field:
-            name: compositeField
-            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
-            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
-            fields:
-              - name: link_label
-                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-                label: Link Label
-              - name: link_target
-                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
-                appName: pages
-                label: Seite auswählen
+          label: Informationen Links
+        - name: contact_informations_right_middle
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          height: 500
+          label: Informationen Mitte Rechts
+        - name: contact_informations_right
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          height: 500
+          label: Informationen Rechts
 
 actions: !include /kits-template/dialogs/common/actions.yaml

@@ -1,16 +1,15 @@
 <#include "../common/helpers.ftl">
 <#assign image = damfn.getAssetLink( content.image )! >
 
-<article class="component component--full m-b-l">
-    <div class="component">
+<article class="component col-xs-12 col-md-6">
         <#if image?has_content >
             <a href="${ image }" class="component__image--link" target="_blank">
               <img src="${ image }" class="component__image component__image--inline">
             </a>
         </#if >
-    </div>
+      </article>
 
-    <div class="component">
+      <article class="component col-xs-12 col-md-6">
         <h1>
             ${ content.title! }
         </h1>
@@ -31,5 +30,4 @@
                 </ul>
             </#list>
         </#if>
-    </div>
 </article>

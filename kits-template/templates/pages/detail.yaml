@@ -13,6 +13,8 @@ areas:
         id: kits-template:components/content
       download_list:
         id: kits-template:components/download_list
+      team:
+        id: kits-template:components/team
   footer:
     editable: false
     inheritance:

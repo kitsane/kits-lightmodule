@@ -1,19 +1,19 @@
 <#include "../common/helpers.ftl">
 
 <#assign image = damfn.getAssetLink( content.image )! >
-<article class="component">
+  <article class="component col-xs-12 col-md-6">
     <h1>
-        ${ content.title! }
+      ${ content.title! }
     </h1>
 
     <#if image?has_content >
-        <div class="component__image" style="background-image: url(${ image });"></div>
+      <div class="component__image" style="background-image: url(${ image });"></div>
     </#if >
     <p>
-        ${ content.text! }
+      ${ content.text! }
     </p>
 
     <a href="${ link_by_path( content.linklink_target! ) }">
-        ${ content.linklink_label! }
+      ${ content.linklink_label! }
     </a>
-</article>
+  </article>
