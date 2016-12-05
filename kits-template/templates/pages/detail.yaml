@@ -7,14 +7,10 @@ areas:
   main:
     renderType: freemarker
     availableComponents:
-      link_list:
-        id: kits-template:components/link_list
       content:
         id: kits-template:components/content
-      download_list:
-        id: kits-template:components/download_list
-      team:
-        id: kits-template:components/team
+      row:
+        id: kits-template:components/row
   footer:
     editable: false
     inheritance:

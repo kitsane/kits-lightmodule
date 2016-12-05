@@ -1,0 +1,13 @@
+templateScript: /kits-template/templates/components/row.ftl
+renderType: freemarker
+title: Zeile
+areas:
+  row:
+    renderType: freemarker
+    availableComponents:
+      link_list:
+        id: kits-template:components/link_list
+      download_list:
+        id: kits-template:components/download_list
+      team:
+        id: kits-template:components/team
