@@ -1,4 +1,0 @@
-templateScript: /kits-template/templates/components/iframe.ftl
-renderType: freemarker
-dialog: kits-template:components/iframe
-title: Iframe

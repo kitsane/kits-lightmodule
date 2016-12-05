@@ -11,5 +11,5 @@ areas:
         id: kits-template:components/download_list
       team:
         id: kits-template:components/team
-      iframe:
-        id: kits-template:components/iframe
+      map:
+        id: kits-template:components/map
