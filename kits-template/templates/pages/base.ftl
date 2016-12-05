@@ -17,6 +17,19 @@
     <link href="${ ctx.contextPath }/.resources/kits-template/webresources/css/main.css" rel="stylesheet">
     <script src="${ ctx.contextPath }/.resources/kits-template/webresources/js/main.js"></script>
 
+    <#if root_page.google_analytics_code?has_content && cmsfn.publicInstance>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '${ root_page.google_analytics_code }', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </#if>
+
+
     <@cms.page />
   </head>
 

@@ -1,5 +1,11 @@
 form:
   tabs:
     - !include /kits-template/dialogs/common/default_page_dialog.yaml
+    - name: tabAnalytics
+      label: Analytics
+      fields:
+        - name: google_analytics_code
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Google Analytics Tracking Code
 
 actions: !include /kits-template/dialogs/common/actions.yaml
