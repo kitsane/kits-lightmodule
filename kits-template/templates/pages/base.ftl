@@ -107,7 +107,7 @@
 
     <main role="main"<#if background?has_content> class="${ background }"</#if>>
       <section class="container">
-        <div class="row">
+        <div class="row<#if cmsfn.editMode> row-block</#if>">
           <@cms.area name="main" />
         </div>
       </section>

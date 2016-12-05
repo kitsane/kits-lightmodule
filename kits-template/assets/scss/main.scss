@@ -1,3 +1,4 @@
+$enable-flex: true;
 
 $container-max-widths: (
   sm: 540px,
@@ -50,6 +51,7 @@ header {
     display: table;
 
     height: 100%;
+    margin-top: .3rem;
   }
 
   a {
@@ -78,7 +80,7 @@ nav {
   }
 
   ul {
-    //height: calc(#{$space-large} - #{$border-width * 2});
+    height: calc(#{$space-large} - #{$border-width * 2});
     display: table;
 
     margin: 0;
@@ -134,15 +136,18 @@ nav {
   }
 
   &.nav--small {
-    height: $space-large;
+    min-height: $space;
 
     font-size: .8rem;
+
+    ul {
+      height: $space-large;
+    }
   }
 
   .nav--active {
     font-weight: bold;
   }
-
 }
 
 main {
@@ -370,4 +375,8 @@ figure {
 
 .space-small {
   margin-bottom: $space;
+}
+
+.row-block {
+  display: block;
 }
