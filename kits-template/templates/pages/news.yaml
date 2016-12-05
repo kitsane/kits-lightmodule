@@ -2,7 +2,7 @@ templateScript: /kits-template/templates/pages/base.ftl
 renderType: freemarker
 visible: true
 title: Aktuelles
-dialog: kits-template:pages/home
+dialog: kits-template:pages/base
 areas:
   main:
     renderType: freemarker

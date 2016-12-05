@@ -1,20 +1,15 @@
 templateScript: /kits-template/templates/pages/base.ftl
 renderType: freemarker
 visible: true
-title: Detailseite
+title: Kontaktformular
 dialog: kits-template:pages/base
 areas:
   main:
     renderType: freemarker
     availableComponents:
-      content:
-        id: kits-template:components/content
-      movie:
-        id: kits-template:components/movie
-      gallery:
-        id: kits-template:components/gallery
-      row:
-        id: kits-template:components/row
+      form:
+        id: form:components/form
+
   footer:
     editable: false
     inheritance:

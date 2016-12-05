@@ -1,0 +1,5 @@
+form:
+  tabs:
+    - !include /kits-template/dialogs/common/default_page_dialog.yaml
+
+actions: !include /kits-template/dialogs/common/actions.yaml
