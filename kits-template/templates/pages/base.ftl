@@ -1,4 +1,6 @@
 <#ftl>
+<#include "../common/helpers.ftl">
+
 <#assign current_page = cmsfn.page( content )! >
 <#assign root_page = cmsfn.root( current_page, "mgnl:page" )!current_page! >
 
@@ -46,23 +48,25 @@
           </a>
         </div>
 
-        <div class="col-md-4">
-          <div class="claim">
-            <a href="#" class="hidden--tablet">
-              Zweisprachige Tagesschule<br>
-              Bilingual Dayschool
-            </a>
+        <#if root_page.slogan_left?has_content>
+          <div class="col-md-4">
+            <div class="claim">
+                <a href="${ link_by_path( root_page.slogan_left_link ) }" class="hidden--tablet">
+                  ${ root_page.slogan_left }
+                </a>
+            </div>
           </div>
-        </div>
+        </#if>
 
-        <div class="col-md-4">
-          <div class="claim">
-            <a href="#" class="hidden--tablet">
-              Kindertagesstätte<br>
-              Daycare Center
-            </a>
+        <#if root_page.slogan_right?has_content>
+          <div class="col-md-4">
+            <div class="claim">
+                <a href="${ link_by_path( root_page.slogan_right_link ) }" class="hidden--tablet">
+                  ${ root_page.slogan_right }
+                </a>
+            </div>
           </div>
-        </div>
+        </#if>
       </div>
     </header>
 

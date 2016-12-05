@@ -1,6 +1,25 @@
 form:
   tabs:
     - !include /kits-template/dialogs/common/default_page_dialog.yaml
+    - name: tabSlogan
+      label: Slogans
+      fields:
+        - name: slogan_left
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          rows: 2
+          label: Slogan Links
+        - name: slogan_left_link
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          appName: pages
+          label: Seite auswählen
+        - name: slogan_right
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          rows: 2
+          label: Slogan Rechts
+        - name: slogan_right_link
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          appName: pages
+          label: Seite auswählen
     - name: tabAnalytics
       label: Analytics
       fields:
