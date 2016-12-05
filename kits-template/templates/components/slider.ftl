@@ -1,11 +1,11 @@
 <article class="component col-xs-12">
     <#if content.images?has_content >
       <#if content.images?size gt 1>
-        <#list content.images>
+        <#list cmsfn.children( content.images )>
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <#items as image>
-                <div class="swiper-slide" style="background-image: url(${ damfn.getAssetLink( image )! });"></div>
+              <#items as item>
+                <div class="swiper-slide" style="background-image: url(${ damfn.getAssetLink( item.image )! }); background-position: center ${ item.position }"></div>
               </#items>
             </div>
 

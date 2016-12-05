@@ -8,7 +8,7 @@
           ${ content.introduction! }
       </p>
       <#if image?has_content >
-          <div class="component__image" style="background-image: url(${ image });"></div>
+          <div class="component__image" style="background-image: url(${ image! }); background-position: center ${ content.image_position!'center' };"></div>
       </#if >
       <div class="text-columns">
           ${ cmsfn.decode(content).text! }

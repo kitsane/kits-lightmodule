@@ -15,6 +15,20 @@ form:
             class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
           contentPreviewDefinition:
             contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+        - name: image_position
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bild Positiion
+          options:
+            - name: top
+              value: 'top'
+              label: Oben
+            - name: center
+              value: 'center'
+              selected: true
+              label: Mitte
+            - name: bottom
+              value: 'bottom'
+              label: Unten
         - name: text
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Text
