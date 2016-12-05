@@ -1,0 +1,17 @@
+form:
+ tabs:
+    - name: tab_main
+      label: Allgemein
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Titel
+        - name: iframe
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Link für iFrame
+        - name: text
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Text
+          rows: 5
+
+actions: !include /kits-template/dialogs/common/actions.yaml
