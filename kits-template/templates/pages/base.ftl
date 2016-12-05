@@ -4,6 +4,11 @@
 <#assign current_page = cmsfn.page( content )! >
 <#assign root_page = cmsfn.root( current_page, "mgnl:page" )!current_page! >
 
+<#assign template_style = content.background>
+<#if template_style == 'none'>
+  <#assign template_style = ''>
+</#if>
+
 <!doctype html>
 <html lang="${ cmsfn.language() }">
   <head>
@@ -35,12 +40,12 @@
     <@cms.page />
   </head>
 
-  <body<#if content.background?has_content> class="${ content.background }-top"</#if>>
+  <body<#if template_style?has_content> class="${ template_style }-top"</#if>>
     <header class="container">
       <div class="row">
         <div class="col-xs-12 col-md-2">
           <a href="${ cmsfn.link( root_page) }">
-            <#if content.background == 'child'>
+            <#if template_style == 'child'>
               <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_kita_logo.svg" alt="brand" width="150" height="63">
             <#else>
               <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_school_logo.svg" alt="brand" width="150" height="63">
@@ -50,7 +55,7 @@
 
         <#if root_page.slogan_left?has_content>
           <div class="col-md-4">
-            <div class="claim">
+            <div class="claim <#if template_style == "lined"> active</#if>">
                 <a href="${ link_by_path( root_page.slogan_left_link ) }" class="hidden--tablet">
                   ${ root_page.slogan_left }
                 </a>
@@ -60,7 +65,7 @@
 
         <#if root_page.slogan_right?has_content>
           <div class="col-md-4">
-            <div class="claim">
+            <div class="claim<#if template_style == "child"> active</#if>">
                 <a href="${ link_by_path( root_page.slogan_right_link ) }" class="hidden--tablet">
                   ${ root_page.slogan_right }
                 </a>
@@ -117,12 +122,7 @@
       </div>
     </nav>
 
-    <#assign background = ''>
-    <#if content.background?has_content>
-      <#assign background = 'background--${ content.background! }'>
-    </#if>
-
-    <main role="main"<#if background?has_content> class="${ background }"</#if>>
+    <main role="main"<#if template_style?has_content> class="background--${ template_style }"</#if>>
       <section class="container">
         <div class="row<#if cmsfn.editMode> row-block</#if>">
           <@cms.area name="main" />
