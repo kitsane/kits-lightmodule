@@ -54,7 +54,7 @@
         </div>
 
         <#if root_page.slogan_left?has_content>
-          <div class="col-md-4">
+          <div class="col-md-4 hidden--tablet">
             <div class="claim <#if template_style == "lined"> active</#if>">
                 <a href="${ link_by_path( root_page.slogan_left_link ) }" class="hidden--tablet">
                   ${ root_page.slogan_left }
@@ -64,7 +64,7 @@
         </#if>
 
         <#if root_page.slogan_right?has_content>
-          <div class="col-md-4">
+          <div class="col-md-4 hidden--tablet">
             <div class="claim<#if template_style == "child"> active</#if>">
                 <a href="${ link_by_path( root_page.slogan_right_link ) }" class="hidden--tablet">
                   ${ root_page.slogan_right }
@@ -72,35 +72,38 @@
             </div>
           </div>
         </#if>
+        <div class="visible--tablet">
+          <button class="button__toggle">☰</button>
+        </div>
       </div>
     </header>
 
     <#assign open_sub_page = current_page>
 
-      <div class="container">
-        <nav class="nav--bordered">
-          <div class="row">
-            <div class="col-xs-12">
-              <#list cmsfn.children( root_page, 'mgnl:page' )>
-                <ul>
-                  <#items as item >
-                    <#if !item.hidden_in_navigation!false>
-                      <#if cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)>
-                          <#assign open_sub_page = item>
-                      </#if>
-                      <li>
-                        <a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a>
-                      </li>
+    <div class="container">
+      <nav class="nav--bordered">
+        <div class="row hidden--tablet">
+          <div class="col-xs-12">
+            <#list cmsfn.children( root_page, 'mgnl:page' )>
+              <ul>
+                <#items as item >
+                  <#if !item.hidden_in_navigation!false>
+                    <#if cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)>
+                        <#assign open_sub_page = item>
                     </#if>
-                  </#items >
-                </ul>
-              </#list >
-            </div>
+                    <li>
+                      <a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a>
+                    </li>
+                  </#if>
+                </#items >
+              </ul>
+            </#list >
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+    </div>
 
-    <nav class="nav--small">
+    <nav class="nav--small hidden--tablet">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -122,6 +125,33 @@
       </div>
     </nav>
 
+    <div class="nav__mobile">
+      <button class="button__toggle">×</button> 
+      <#list cmsfn.children( root_page, 'mgnl:page' )>
+        <ul>
+          <#items as item >
+            <#if !item.hidden_in_navigation!false>
+              <li>
+                <a href="${ cmsfn.link( item ) }"<#if item == current_page> class="active"</#if>>${ item.title! }</a>
+                <#if cmsfn.children(item)?has_content>
+                  <#list cmsfn.children( item, 'mgnl:page' )>
+                    <ul>
+                      <#items as item >
+                        <#if !item.hidden_in_navigation!false>
+                          <li>
+                            <a href="${ cmsfn.link( item ) }"<#if item == current_page> class="active"</#if>>${ item.title! }</a>
+                          </li>
+                        </#if>
+                      </#items >
+                    </ul>
+                  </#list >
+                </#if>
+              </li>
+            </#if>
+          </#items >
+        </ul>
+      </#list >
+    </div>
     <main role="main"<#if template_style?has_content> class="background--${ template_style }"</#if>>
       <section class="container">
         <div class="row<#if cmsfn.editMode> row-block</#if>">

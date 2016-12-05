@@ -1,8 +1,6 @@
 $enable-flex: true;
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
   lg: 1055px
 );
 
@@ -353,8 +351,8 @@ h1 {
 }
 
 .hidden--tablet {
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (max-width: 1023px) {
+    display: none !important;
   }
 }
 
@@ -442,4 +440,58 @@ textarea {
   border: 1px solid black;
   padding: .5rem 1rem;
   margin-left: 1rem;
+}
+
+.nav__mobile {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $body_bg;
+  z-index: 1;
+  position: fixed;
+  overflow: scroll;
+  display: none;
+  padding-top: 1rem;
+
+  .active {
+    font-weight: bold;
+  }
+
+  ul {
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    font-size: 1.3rem;
+
+    li {
+      margin-bottom: 1rem;
+
+      a {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.open {
+  display: block;
+}
+
+.button__toggle {
+  position: absolute;
+  right: 1rem;
+  font-size: 29px;
+  border: 1px solid black;
+  width: 46px;
+  margin-top: 9px;
+  display:none;
+
+  @media screen and (max-width: 1023px) {
+    display: block !important;
+  }
+}
+
+.fixed {
+  position: fixed;
 }

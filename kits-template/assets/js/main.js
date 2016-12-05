@@ -24,4 +24,14 @@ $(function() {
 
   galleryTop.params.control = galleryThumbs;
   galleryThumbs.params.control = galleryTop;
+
+  $('.button__toggle').on('click', function() {
+    if ($('.nav__mobile').hasClass('open')) {
+      $('.nav__mobile').removeClass('open');
+      $('body').removeClass('fixed');
+    } else {
+      $('.nav__mobile').addClass('open')
+      $('body').addClass('fixed');
+    }
+  })
 });
