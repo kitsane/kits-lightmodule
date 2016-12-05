@@ -11,6 +11,8 @@ areas:
         id: kits-template:components/content
       movie:
         id: kits-template:components/movie
+      gallery:
+        id: kits-template:components/gallery
       row:
         id: kits-template:components/row
   footer:

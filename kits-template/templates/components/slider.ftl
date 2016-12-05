@@ -2,7 +2,7 @@
     <#if content.images?has_content >
       <#if content.images?size gt 1>
         <#list cmsfn.children( content.images )>
-          <div class="swiper-container">
+          <div class="swiper-container swiper-container-normal">
             <div class="swiper-wrapper">
               <#items as item>
                 <div class="swiper-slide" style="background-image: url(${ damfn.getAssetLink( item.image )! }); background-position: center ${ item.position }"></div>
