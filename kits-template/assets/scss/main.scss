@@ -79,13 +79,12 @@ header {
 nav {
   &.nav--bordered {
     border: {
-      top: $border;
       bottom: $border;
     }
   }
 
   ul {
-    height: calc(#{$space-large} - #{$border-width * 2});
+    height: $space-large;
     display: table;
 
     margin: 0;
@@ -142,6 +141,7 @@ nav {
 
   &.nav--small {
     min-height: $space;
+    margin-bottom: 1rem;
 
     font-size: .8rem;
 

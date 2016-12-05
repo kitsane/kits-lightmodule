@@ -77,28 +77,28 @@
 
     <#assign open_sub_page = current_page>
 
-    <nav class="nav--bordered">
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <#list cmsfn.children( root_page, 'mgnl:page' )>
-              <ul>
-                <#items as item >
-                  <#if !item.hidden_in_navigation!false>
-                    <#if cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)>
-                        <#assign open_sub_page = item>
+        <nav class="nav--bordered">
+          <div class="row">
+            <div class="col-xs-12">
+              <#list cmsfn.children( root_page, 'mgnl:page' )>
+                <ul>
+                  <#items as item >
+                    <#if !item.hidden_in_navigation!false>
+                      <#if cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)>
+                          <#assign open_sub_page = item>
+                      </#if>
+                      <li>
+                        <a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a>
+                      </li>
                     </#if>
-                    <li>
-                      <a href="${ cmsfn.link( item ) }"<#if item == current_page || cmsfn.children( item, 'mgnl:page' )?seq_contains(current_page)> class="nav--active"</#if>>${ item.title! }</a>
-                    </li>
-                  </#if>
-                </#items >
-              </ul>
-            </#list >
+                  </#items >
+                </ul>
+              </#list >
+            </div>
           </div>
-        </div>
+        </nav>
       </div>
-    </nav>
 
     <nav class="nav--small">
       <div class="container">
