@@ -9,6 +9,8 @@ areas:
     availableComponents:
       content:
         id: kits-template:components/content
+      movie:
+        id: kits-template:components/movie
       row:
         id: kits-template:components/row
   footer:

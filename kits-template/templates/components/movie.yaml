@@ -1,0 +1,4 @@
+templateScript: /kits-template/templates/components/movie.ftl
+renderType: freemarker
+dialog: kits-template:components/movie
+title: Film
