@@ -126,7 +126,7 @@
     </nav>
 
     <div class="nav__mobile">
-      <button class="button__toggle">×</button> 
+      <button class="button__toggle">×</button>
       <#list cmsfn.children( root_page, 'mgnl:page' )>
         <ul>
           <#items as item >
@@ -160,6 +160,9 @@
       </section>
     </main>
 
-    <@cms.area name="footer" />
+    <div class="container">
+      <@cms.area name="footer" />
+    </div>
+
   </body>
 </html>

@@ -1,7 +1,12 @@
+<#assign template_style = cmsfn.page(content).background>
+<#if template_style == 'none'>
+  <#assign template_style = ''>
+</#if>
+
 <#assign image = damfn.getAssetLink( content.image )! >
 
 <article class="component col-xs-12">
-      <h1>
+      <h1<#if template_style == 'lined'> class="entry-title"</#if>>
           ${ content.title! }
       </h1>
       <p class="text--large">
