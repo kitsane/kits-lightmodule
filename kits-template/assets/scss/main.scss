@@ -54,10 +54,6 @@ header {
     &.active {
       font-weight: bold;
     }
-
-    .claim.green a:hover {
-      color: $green;
-    }
   }
 
   a {
@@ -72,6 +68,10 @@ header {
 
     &:hover {
       border-bottom: none;
+    }
+
+    &.green:hover {
+      color: $green;
     }
   }
 }
