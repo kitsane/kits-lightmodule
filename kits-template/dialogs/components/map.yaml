@@ -6,6 +6,7 @@ form:
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Titel
+          i18n: true
         - name: iframe
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Link für iFrame
@@ -13,5 +14,6 @@ form:
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Text
           rows: 5
+          i18n: true
 
 actions: !include /kits-template/dialogs/common/actions.yaml

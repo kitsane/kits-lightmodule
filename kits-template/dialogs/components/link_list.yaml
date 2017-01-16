@@ -6,6 +6,7 @@ form:
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Titel
+          i18n: true
         - name: links
           class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
           label: Links
@@ -18,6 +19,7 @@ form:
               - name: link_label
                 class: info.magnolia.ui.form.field.definition.TextFieldDefinition
                 label: Link Label
+                i18n: true
               - name: link_target
                 class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
                 appName: pages

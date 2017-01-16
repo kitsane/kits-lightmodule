@@ -8,6 +8,7 @@ form:
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           rows: 2
           label: Slogan Links
+          i18n: true
         - name: slogan_left_link
           class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
           appName: pages
@@ -16,6 +17,7 @@ form:
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           rows: 2
           label: Slogan Rechts
+          i18n: true
         - name: slogan_right_link
           class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
           appName: pages

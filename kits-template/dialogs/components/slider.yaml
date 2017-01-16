@@ -7,6 +7,7 @@ form:
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Text
           rows: 5
+          i18n: true
         - name: images
           class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
           label: Bilder

@@ -6,6 +6,7 @@ form:
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Titel
+          i18n: true
         - name: downloads
           class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
           label: Downloads
@@ -18,6 +19,7 @@ form:
               - name: download_label
                 class: info.magnolia.ui.form.field.definition.TextFieldDefinition
                 label: Download Label
+                i18n: true
               - name: download_target
                 class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
                 targetWorkspace: dam
@@ -27,5 +29,6 @@ form:
                   class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
                 contentPreviewDefinition:
                   contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+                i18n: true
 
 actions: !include /kits-template/dialogs/common/actions.yaml

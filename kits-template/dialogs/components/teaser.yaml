@@ -6,6 +6,7 @@ form:
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Titel
+          i18n: true
         - name: image
           class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
           targetWorkspace: dam
@@ -33,6 +34,7 @@ form:
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Text
           rows: 5
+          i18n: true
         - name: link
           class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
           label: Link

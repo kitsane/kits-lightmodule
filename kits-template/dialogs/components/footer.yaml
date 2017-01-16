@@ -7,13 +7,16 @@ form:
           class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
           height: 500
           label: Informationen Links
+          i18n: true
         - name: contact_informations_right_middle
           class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
           height: 500
           label: Informationen Mitte Rechts
+          i18n: true
         - name: contact_informations_right
           class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
           height: 500
           label: Informationen Rechts
+          i18n: true
 
 actions: !include /kits-template/dialogs/common/actions.yaml
