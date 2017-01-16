@@ -41,42 +41,44 @@
   </head>
 
   <body<#if template_style?has_content> class="${ template_style }-top"</#if>>
-    <header class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-2">
-          <a href="${ cmsfn.link( root_page) }">
-            <#if template_style == 'child'>
-              <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_kita_logo.svg" alt="brand" width="150" height="63">
-            <#else>
-              <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_school_logo.svg" alt="brand" width="150" height="63">
-            </#if>
-          </a>
-        </div>
-
-        <#if root_page.slogan_left?has_content>
-          <div class="col-md-4 hidden--tablet">
-            <div class="claim<#if template_style == "lined"> active</#if>">
-                <a href="${ link_by_path( root_page.slogan_left_link ) }" class="hidden--tablet">
-                  ${ root_page.slogan_left }
-                </a>
-            </div>
+    <div class="flex-wrapper">
+      <header class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-2">
+            <a href="${ cmsfn.link( root_page) }">
+              <#if template_style == 'child'>
+                <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_kita_logo.svg" alt="brand" width="150" height="63">
+              <#else>
+                <img src="${ ctx.contextPath }/.resources/kits-template/webresources/images/kits_school_logo.svg" alt="brand" width="150" height="63">
+              </#if>
+            </a>
           </div>
-        </#if>
 
-        <#if root_page.slogan_right?has_content>
-          <div class="col-md-4 hidden--tablet">
-            <div class="claim<#if template_style == "child"> active</#if>">
-                <a href="${ link_by_path( root_page.slogan_right_link ) }" class="hidden--tablet green">
-                  ${ root_page.slogan_right }
-                </a>
+          <#if root_page.slogan_left?has_content>
+            <div class="col-md-4 hidden--tablet">
+              <div class="claim<#if template_style == "lined"> active</#if>">
+                  <a href="${ link_by_path( root_page.slogan_left_link ) }" class="hidden--tablet">
+                    ${ root_page.slogan_left }
+                  </a>
+              </div>
             </div>
+          </#if>
+
+          <#if root_page.slogan_right?has_content>
+            <div class="col-md-4 hidden--tablet">
+              <div class="claim<#if template_style == "child"> active</#if>">
+                  <a href="${ link_by_path( root_page.slogan_right_link ) }" class="hidden--tablet green">
+                    ${ root_page.slogan_right }
+                  </a>
+              </div>
+            </div>
+          </#if>
+          <div class="visible--tablet">
+            <button class="button__toggle">☰</button>
           </div>
-        </#if>
-        <div class="visible--tablet">
-          <button class="button__toggle">☰</button>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
 
     <#assign open_sub_page = current_page>
 

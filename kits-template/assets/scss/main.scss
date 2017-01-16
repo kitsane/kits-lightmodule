@@ -162,6 +162,12 @@ main {
   }
 }
 
+.lined-top {
+  background-image: url("../images/background_line-left.svg");
+  background-repeat-y: repeat;
+  background-size: 100%;
+}
+
 .background--lined {
   background-image: url("../images/background_line.svg");
 }
@@ -339,6 +345,12 @@ h1 {
 .hidden--tablet {
   @media screen and (max-width: 1023px) {
     display: none !important;
+  }
+}
+
+.flex-wrapper {
+  @media screen and (min-width: 1024px) {
+    display: flex;
   }
 }
 
