@@ -15,6 +15,8 @@ areas:
         id: kits-template:components/gallery
       row:
         id: kits-template:components/row
+      map:
+        id: kits-template:components/map
   footer:
     editable: false
     inheritance:
