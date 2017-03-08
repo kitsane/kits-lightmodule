@@ -73,6 +73,26 @@
               </div>
             </div>
           </#if>
+          <div class="col-md-2 hidden--tablet">
+            <#assign localizedLinks = cmsfn.localizedLinks()! >
+            <#if localizedLinks?has_content >
+              <#assign languages = localizedLinks?keys >
+              <ul class="language-switcher">
+                <#list languages as language>
+                  <li <#if cmsfn.isCurrentLocale(language)> class="nav--active"</#if>>
+                    <a href="${ localizedLinks[ language ] }">
+                      ${ language?upper_case }
+                    </a>
+                  </li>
+                  <#sep>
+                    <li>
+                      /
+                    </li>
+                  </#sep>
+                </#list>
+              </ul>
+            </#if>
+          </div>
           <div class="visible--tablet">
             <button class="button__toggle">☰</button>
           </div>
@@ -153,6 +173,24 @@
           </#items >
         </ul>
       </#list >
+      <#assign localizedLinks = cmsfn.localizedLinks()! >
+      <#if localizedLinks?has_content >
+        <#assign languages = localizedLinks?keys >
+        <ul class="language-switcher">
+          <#list languages as language>
+            <li <#if cmsfn.isCurrentLocale(language)> class="nav--active"</#if>>
+              <a href="${ localizedLinks[ language ] }">
+                ${ language?upper_case }
+              </a>
+            </li>
+            <#sep>
+              <li>
+                /
+              </li>
+            </#sep>
+          </#list>
+        </ul>
+      </#if>
     </div>
     <main role="main"<#if template_style?has_content> class="background--${ template_style }"</#if>>
       <section class="container">

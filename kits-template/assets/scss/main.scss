@@ -496,3 +496,31 @@ textarea {
   list-style: none;
   margin-left: 0 !important;
 }
+
+.language-switcher {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+
+  li {
+    display: inline;
+    font-size: 1rem;
+    line-height: 1;
+
+    a {
+      line-height: 1;
+      font-size: 1rem;
+      display: inline;
+      vertical-align: initial;
+    }
+
+    &.nav--active a {
+      font-weight: 600;
+    }
+  }
+}
+
+.nav__mobile .language-switcher {
+  text-align: left;
+}
