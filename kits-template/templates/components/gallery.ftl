@@ -6,7 +6,7 @@
             <div class="swiper-wrapper">
               <#items as item>
                 <div class="swiper-slide">
-                  <img src="${ damfn.getAssetLink( item.image )! }}">
+                  <img src="${ damfn.getAssetLink( item.image )! }">
                 </div>
               </#items>
             </div>
