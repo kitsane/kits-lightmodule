@@ -1,6 +1,6 @@
 <#include "../common/helpers.ftl">
 
-<article class="component col-xs-12 col-md-4">
+<article class="component col-xs-12">
   <h1>
     ${ content.title! }
   </h1>
