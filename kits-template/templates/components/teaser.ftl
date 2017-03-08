@@ -11,7 +11,7 @@
     <div class="component__image" style="background-image: url(${ image! }); background-position: center ${ content.image_position!'center' };"></div>
   </#if >
   <p>
-    ${ content.text! }
+    ${ cmsfn.decode(content).text! }
   </p>
 
   <a href="${ link_by_path( content.linklink_target! ) }">

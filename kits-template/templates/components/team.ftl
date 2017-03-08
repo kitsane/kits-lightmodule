@@ -5,7 +5,7 @@
         <div class="component__image component__image--portrait" style="background-image: url(${ image_1 });"></div>
     </#if >
     <p>
-        ${ content.text_1! }
+        ${ cmsfn.decode(content).text_1! }
     </p>
 </figure>
 
@@ -16,7 +16,7 @@
         <div class="component__image component__image--portrait" style="background-image: url(${ image_2 });"></div>
     </#if >
     <p>
-        ${ content.text_2! }
+        ${ cmsfn.decode(content).text_2! }
     </p>
 </figure>
 
@@ -27,7 +27,7 @@
         <div class="component__image component__image--portrait" style="background-image: url(${ image_3 });"></div>
     </#if >
     <p>
-        ${ content.text_3! }
+        ${ cmsfn.decode(content).text_3! }
     </p>
 </figure>
 
@@ -38,6 +38,6 @@
         <div class="component__image component__image--portrait" style="background-image: url(${ image_4 });"></div>
     </#if >
     <p>
-        ${ content.text_4! }
+        ${ cmsfn.decode(content).text_4! }
     </p>
 </figure>

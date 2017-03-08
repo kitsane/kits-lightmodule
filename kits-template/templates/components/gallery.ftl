@@ -30,6 +30,6 @@
     </#if >
 
     <p class="text--large">
-      ${ content.text! }
+      ${ cmsfn.decode(content).text! }
     </p>
   </article>

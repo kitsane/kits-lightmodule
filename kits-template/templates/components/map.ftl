@@ -11,6 +11,6 @@
     </div>
   </#if >
   <p>
-    ${ content.text! }
+    ${ cmsfn.decode(content).text! }
   </p>
 </article>

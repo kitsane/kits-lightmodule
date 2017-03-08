@@ -5,6 +5,6 @@
           <div class="component__image" style="background-image: url(${ image! }); background-position: center ${ content.image_position!'center' };"></div>
       </#if >
       <p class="text--large">
-          ${ content.text! }
+          ${ cmsfn.decode(content).text! }
       </p>
   </article>

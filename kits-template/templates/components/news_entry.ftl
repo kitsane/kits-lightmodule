@@ -1,5 +1,5 @@
 <#include "../common/helpers.ftl">
-<#assign image = damfn.getAssetLink( content.image )! >
+<#assign image = damfn.getAssetLink( content.image! )! >
 
 <article class="component col-xs-12 col-md-6">
         <#if image?has_content >
@@ -14,7 +14,7 @@
             ${ content.title! }
         </h1>
         <p>
-            ${ content.text! }
+            ${ cmsfn.decode(content).text! }
         </p>
 
         <#if ( content.links )?has_content>
