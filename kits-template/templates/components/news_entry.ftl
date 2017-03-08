@@ -19,7 +19,7 @@
 
         <#if ( content.links )?has_content>
             <#list cmsfn.children( content.links )>
-                <ul>
+                <ul class="news_link_list">
                     <#items as link>
                         <li>
                             <a href="${ link_by_path( link.link_target! ) }">
