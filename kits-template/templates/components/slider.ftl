@@ -1,4 +1,4 @@
-<article class="component col-xs-12">
+<article class="component component-slider col-xs-12">
     <#if content.images?has_content >
       <#if content.images?size gt 1>
         <#list cmsfn.children( content.images )>
@@ -10,6 +10,9 @@
             </div>
 
             <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </#list>
       <#else>

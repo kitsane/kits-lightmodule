@@ -6,6 +6,8 @@ $(function() {
     pagination: '.swiper-pagination',
     paginationClickable: true,
     effect: 'fade',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
   })
 
   var galleryTop = new Swiper('.swiper-container-gallery', {

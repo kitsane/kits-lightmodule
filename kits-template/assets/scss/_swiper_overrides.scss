@@ -57,3 +57,21 @@
 .swiper-container-gallery-thumbs .swiper-slide-active {
     opacity: 1;
 }
+
+.component-slider {
+  .swiper-button-next, .swiper-button-prev {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 22px;
+    background-image: none;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
