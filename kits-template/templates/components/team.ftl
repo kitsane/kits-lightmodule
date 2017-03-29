@@ -1,4 +1,4 @@
-<#assign image_1 = damfn.getAssetLink( content.image_1! )! >
+<#assign image_1 = damfn.getAssetLink( content.image_1!, "half" )! >
 
 <figure class="col-xs-6 col-md-3 space-small">
     <#if image_1?has_content >
@@ -9,7 +9,7 @@
     </p>
 </figure>
 
-<#assign image_2 = damfn.getAssetLink( content.image_2! )! >
+<#assign image_2 = damfn.getAssetLink( content.image_2!, "half" )! >
 
 <figure class="col-xs-6 col-md-3 space-small">
     <#if image_2?has_content >
@@ -20,7 +20,7 @@
     </p>
 </figure>
 
-<#assign image_3 = damfn.getAssetLink( content.image_3! )! >
+<#assign image_3 = damfn.getAssetLink( content.image_3!, "half" )! >
 
 <figure class="col-xs-6 col-md-3 space-small">
     <#if image_3?has_content >
@@ -31,7 +31,7 @@
     </p>
 </figure>
 
-<#assign image_4 = damfn.getAssetLink( content.image_4! )! >
+<#assign image_4 = damfn.getAssetLink( content.image_4!, "half" )! >
 
 <figure class="col-xs-6 col-md-3 space-small">
     <#if image_4?has_content >

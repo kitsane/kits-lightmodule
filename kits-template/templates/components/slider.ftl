@@ -5,7 +5,7 @@
           <div class="swiper-container swiper-container-normal">
             <div class="swiper-wrapper">
               <#items as item>
-                <div class="swiper-slide" style="background-image: url(${ damfn.getAssetLink( item.image )! }); background-position: center ${ item.position }"></div>
+                <div class="swiper-slide" style="background-image: url(${ damfn.getAssetLink( item.image, "full" )! }); background-position: center ${ item.position }"></div>
               </#items>
             </div>
 
@@ -16,7 +16,7 @@
           </div>
         </#list>
       <#else>
-        <div class="component__image" style="background-image: url(${ damfn.getAssetLink( content.images?first )! });"></div>
+        <div class="component__image" style="background-image: url(${ damfn.getAssetLink( content.images?first, "full" )! });"></div>
       </#if >
     </#if >
 

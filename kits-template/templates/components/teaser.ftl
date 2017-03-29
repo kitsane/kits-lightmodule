@@ -1,6 +1,6 @@
 <#include "../common/helpers.ftl">
 
-<#assign image = damfn.getAssetLink( content.image )! >
+<#assign image = damfn.getAssetLink( content.image, "half" )! >
 
 <article class="component col-xs-12 col-md-6">
   <h1>

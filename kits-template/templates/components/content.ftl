@@ -3,7 +3,7 @@
   <#assign template_style = ''>
 </#if>
 
-<#assign image = damfn.getAssetLink( content.image )! >
+<#assign image = damfn.getAssetLink( content.image, "full")! >
 
 <article class="component col-xs-12">
       <h1<#if template_style == 'lined'> class="entry-title"</#if>>
