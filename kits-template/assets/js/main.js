@@ -1,7 +1,7 @@
 $(function() {
   var mySwiper = new Swiper ('.swiper-container-normal', {
     loop: true,
-    autoplay: 5000,
+    autoplay: 1000,
     speed: 1000,
     pagination: '.swiper-pagination',
     paginationClickable: true,
