@@ -40,7 +40,7 @@
     <@cms.page />
   </head>
 
-  <body<#if template_style?has_content> class="${ template_style }-top"</#if>>
+  <body<#if template_style?has_content> class="${ template_style }"</#if>>
     <div class="flex-wrapper">
       <header class="container">
         <div class="row">

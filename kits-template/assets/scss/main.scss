@@ -162,7 +162,7 @@ main {
   }
 }
 
-.lined-top {
+.lined {
   background-image: url("../images/background_line-left.svg");
   background-repeat-y: repeat;
   background-size: 100%;
@@ -172,23 +172,12 @@ main {
   background-image: url("../images/background_line.svg");
 }
 
-.child-top {
+.child {
   background: {
-    position: top center;
+    position: top center, bottom center;
 
-    image: url(../images/background_child_top.svg);
-    size: cover;
-    repeat: no-repeat;
-  }
-}
-
-.child-bottom {
-  background: {
-    position: bottom center;
-
-    image: url(../images/background_child_bottom.svg);
-    size: cover;
-    repeat: no-repeat;
+    image: url(../images/background_child_top.svg), url(../images/background_child_bottom.svg);
+    repeat: no-repeat, no-repeat;
   }
 }
 
